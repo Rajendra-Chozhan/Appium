@@ -9,9 +9,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "Features",glue = "",
-tags="  @LoginTest",
+tags=" @WestSidePageTest ",
 plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-		"json:target/cucumber-reports/cucumber.json"
+		"html:test-output/MyExtentReport/Index.html"
 })
 
 

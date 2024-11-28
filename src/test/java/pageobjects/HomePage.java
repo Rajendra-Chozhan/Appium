@@ -1,16 +1,7 @@
 package pageobjects;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import basepackage.BaseClass;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import pageFactory.HomePage_Locators;
 
@@ -83,7 +74,7 @@ public void Verify_Ui_Elements_HomePage() throws InterruptedException {
 	Loans.isDisplayed();
 	Thread.sleep(3000);
 	
-	scrollup(driver);
+	//scrollup(driver);
 	Thread.sleep(3000);	
 Bottom_Icons.isDisplayed();
 
@@ -106,6 +97,16 @@ public void Click_SignOut() throws InterruptedException {
 	Thread.sleep(2000);
 	Signout_Popup.click();
 	}
+public void Click_Electronics_section() throws InterruptedException {
+	
+	Electronics_section.click();
+	
+	}
 
+public void Click_Fashion_section() throws InterruptedException {
+	
+	Fashion_section.click();
+	
+	}
 
 }

@@ -19,12 +19,13 @@ public class LaunchApp_StepDefinition extends HomePage {
 	    
 	@Given("user successfully launches app")
 	public void user_successfully_launches_app() throws InterruptedException {
+		
+	//	unlockmobile(driver);
 		Thread.sleep(5000);
-	//	Click_locationPopup();
+		//Click_locationPopup();
 		Thread.sleep(5000);
 	    System.out.println("Application is launched successfully");
-		
-	    screenshot(driver );
+		screenshot(driver );
 	    
 	}
 
@@ -111,6 +112,30 @@ public class LaunchApp_StepDefinition extends HomePage {
 			
 	}
 	
+	@Then("user clicks on Electronics section")
+	public void user_clicks_on_Electronics() throws InterruptedException {
 	
+		 screenshot(driver);
+			Thread.sleep(10000);
+			Click_Electronics_section();
+			
+	}
+	
+	@Then("user clicks on Fashion section")
+	public void user_clicks_on_Fashion() throws InterruptedException {
+	
+		 screenshot(driver);
+			Thread.sleep(10000);
+			Click_Fashion_section();
+			
+	}
+	@Then("user clicks on fashion section")
+	public void user_clicks_Fashion_section() throws InterruptedException {
+	
+		 screenshot(driver);
+			Thread.sleep(10000);
+			Click_Fashion_section();
+			
+	}
 
 }

@@ -1,10 +1,7 @@
 package pageobjects;
 
 import java.time.Duration;
-
 import org.openqa.selenium.support.PageFactory;
-
-import basepackage.BaseClass;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import pageFactory.ProfilePage_Locators;
 

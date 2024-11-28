@@ -18,7 +18,7 @@ import org.openqa.selenium.OutputType;
 
 
 import basepackage.BaseClass;
-
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -30,9 +30,11 @@ public class Hooks extends BaseClass{
     
 	@Before
 	public void before() throws IOException, InterruptedException {
-		
+		 
 	new BaseClass().launchApp();
 	//startRecording(driver);
+	
+
 		}
 	
 	@After
@@ -89,11 +91,9 @@ public static void SendingMail() throws AddressException, IOException, Messaging
 		Runtime r=Runtime.getRuntime();  	  
 		r.addShutdownHook(new Thread(){  
 		public void run(){  
-			Mailing sm = new Mailing();
 			try {
-				sm.mail();
-				System.out.println("Report has been sent"); 
-			} catch (IOException | MessagingException e) {
+				Mailing.mail();
+						} catch (IOException e) {
 				e.printStackTrace();
 			}
 			
